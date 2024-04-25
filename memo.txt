@@ -1,0 +1,12 @@
+
+（最初だけ）
+python -m venv env
+（毎回）
+env/Scripts/activate
+
+（プロジェクト作成時）
+django-admin startproject chefsTable
+
+（サーバー軌道）
+python manage.py runserver
+
