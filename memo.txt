@@ -7,6 +7,6 @@ env/Scripts/activate
 （プロジェクト作成時）
 django-admin startproject chefsTable
 
-（サーバー軌道）
+（サーバー起動）
 python manage.py runserver
 
