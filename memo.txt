@@ -1,12 +1,32 @@
 
 （最初だけ）
 python -m venv env
+
+setting.json
+ "terminal.integrated.env.windows": {
+        "PSExecutionPolicyPreference": "RemoteSigned"
+    }
+
+pip install django（envをactivateしてから）
+
+
 （毎回）
 env/Scripts/activate
 
 （プロジェクト作成時）
 django-admin startproject chefsTable
 
+（アプリケーション作成）
+python manage.py startapp myapp
+
 （サーバー起動）
 python manage.py runserver
+
+
+
+
+（マイグレーション）
+python manage.py makemigrations
+python manage.py migrate
+python manage.py showmigrations
 
