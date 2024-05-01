@@ -15,3 +15,8 @@ class Booking(models.Model):
     guest_count = models.IntegerField()
     reservation_time = models.DateField(auto_now=True) # auto_now=True の場合、フォーム上には表示されない
     comments = models.CharField(max_length=1000)
+
+    def __str__(self):
+        # admin画面でのデータ表示に使われる
+        # より詳細に制御するには、admin.py で admin.ModelAdminを使ってカスタマイズする
+        return f"{self.first_name} {self.last_name} ({self.guest_count}) {self.reservation_time}"
