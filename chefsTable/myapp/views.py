@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse 
+from .forms import BookingForm
+
 def index(request): 
     return HttpResponse("Hello, world. This is the index view of MyApp.") 
 
@@ -25,3 +27,11 @@ def menu(request):
 
 def book(request):
     return HttpResponse('Make a booking')
+
+def book_form(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form': BookingForm() }
+    return render(request, 'book_form.html', context)
