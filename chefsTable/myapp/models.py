@@ -20,3 +20,14 @@ class Booking(models.Model):
         # admin画面でのデータ表示に使われる
         # より詳細に制御するには、admin.py で admin.ModelAdminを使ってカスタマイズする
         return f"{self.first_name} {self.last_name} ({self.guest_count}) {self.reservation_time}"
+
+class Employee(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    role = models.CharField(max_length=100)
+    shift = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.first_name
+
+
