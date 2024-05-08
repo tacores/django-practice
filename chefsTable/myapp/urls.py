@@ -10,4 +10,5 @@ urlpatterns = [
     path('book', views.book, name='book'),
     path('drinks/<str:drink_name>', views.drinks, name="drink_name"),
     path('book_form', views.book_form, name='book_form'),
+    path('menu_model', views.menu_model, name='menu_model'),
 ] 

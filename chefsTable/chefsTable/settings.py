@@ -55,8 +55,8 @@ ROOT_URLCONF = 'chefsTable.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': ['templates'],  # プロジェクト直下のディレクトリパスを指定
+        'APP_DIRS': True,   # アプリ直下のtempletesディレクトリを探索するかどうか
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -117,6 +117,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# 下記のローカルパスを直接参照する方法は、DEBUG = True の場合しか動作しない
+STATICFILES_DIRS = 'myapp/static',
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
