@@ -1,0 +1,57 @@
+(User)
+name / pw
+token
+
+1. superuser
+admin / testadmin
+10b6249f361e52305d1acb8a6ddaacf4097c7f78
+
+2. manager
+manager / testm150
+09b8a213ef5ae8261b20838388f08b98c1942beb
+
+3. deliverer
+deliverer / testd150
+2d8ec0ccf80404730ec816181cd02e64a758f881
+
+4. customer
+customer / testc150
+6f4a1751f1c64fe0d6b4bc504794211bff990974
+
+
+
+(URL)
+The endpoints specified in the assignment were somewhat unreasonable, so I use the URL below.
+
+User create
+http://localhost:8000/auth/users/
+
+Token create
+http://localhost:8000/auth/token/login
+
+Me
+http://localhost:8000/auth/users/me/
+
+MenuItems
+http://localhost:8000/api/menu-items
+
+Groups
+http://localhost:8000/api/groups/manager/users
+http://localhost:8000/api/groups/delivery-crew/users
+
+Cart
+http://localhost:8000/api/cart/items
+
+Order
+http://localhost:8000/api/orders
+
+
+(POST Example)
+api/cart/items/
+
+{
+"menuitem": 8,
+"quantity": 2
+}
+
+
