@@ -1,0 +1,5 @@
+
+testmysql
+
+admindjango / employee@123!
+
